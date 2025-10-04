@@ -1,23 +1,12 @@
 public class Transaction {
     private double amount;
-    private String type; // e.g., "Deposit" or "Withdrawal"
+    private String type; // "Income" or "Outgoing"
 
-    // Constructor
-    public Transaction(double amount, String type) {
-        this.amount = amount;
+    public Transaction(String type, double amount) {
         this.type = type;
+        this.amount = amount;
     }
 
-    // Getters
-    public double getAmount() {
-        return amount;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    // Print transaction info
     public void printTransaction() {
         System.out.println(type + ": $" + amount);
     }
